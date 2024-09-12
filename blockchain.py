@@ -56,3 +56,8 @@ def register_node(self, address):
 
       last_block_hash = self.hash(last_block)
       if block['previous_hash'] != last_block_hash;
+      return False
+
+     #check that the proof of work is correct
+     if not self.valid_proof(last_block['proof'], block['proof'], last_block_hash):
+     return False
