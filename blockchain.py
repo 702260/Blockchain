@@ -61,3 +61,12 @@ def register_node(self, address):
      #check that the proof of work is correct
      if not self.valid_proof(last_block['proof'], block['proof'], last_block_hash):
      return False
+
+     last_block = block
+     current_index += 1
+
+     return True
+
+     def resolve_conflicts(self):
+     """
+  
