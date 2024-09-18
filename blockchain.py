@@ -93,6 +93,34 @@ def register_node(self, address):
             # check if the length is longer and the chain is valid
 
             if length > max_length and self.valid_chain(chain):
+
+              max_length = length
+              new_chain = chain
+
+           # Replace our chain if we discovered a new, valid  chain longer than ours
+           if new_chain:
+               self.chain = new_chain
+               return True
+
+           return False
+
+       def new_block(self, proof, previous_hash):
+       """
+       Create a new Block in the Blockchain
+
+       :param proof: The proof given by the proof of Work algorithm
+       :param previous_hash: Hash of previous Block
+       :return: New Block
+       """
+
+       block = {
+           'index': len(self.chain) + 1,
+           'timestamp': time(),
+           'transactions': self.current_transactions,
+           
+      
+           
+              
             
      
     
