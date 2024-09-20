@@ -117,6 +117,25 @@ def register_node(self, address):
            'index': len(self.chain) + 1,
            'timestamp': time(),
            'transactions': self.current_transactions,
+           'proof': proof,
+           'previous_hash': previous_hash or self.hash(self.chain[-1]),
+                }
+
+          # Reset the current list of transactions
+              self.current_transactions = []
+               self.chain.append(block)
+               return block
+
+
+          def new_transaction(self, sender, recipient, amount):
+              """
+              Creates a new transaction to go into a next mined block
+              :param Sender: Address of the sender
+              :param recipient: Address of the recipient
+              :param Amount: Amount
+              :return: The index of the block that will hold this transaction
+              """
+              
            
       
            
