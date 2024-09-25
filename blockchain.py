@@ -190,7 +190,8 @@ def register_node(self, address):
               :return: <bool> True if Correct, False if not.
 
               """
-           
+              guess = f'{last_proof}{proof}{last_hash}'.encode()
+              guess_hash = hashlib.sha256(guess).hexdigest()
             
              
      
