@@ -192,7 +192,18 @@ def register_node(self, address):
               """
               guess = f'{last_proof}{proof}{last_hash}'.encode()
               guess_hash = hashlib.sha256(guess).hexdigest()
-            
-             
+              return guess_hash[:4] = "0000"
+
+
+       # Instantiate the node
+       app = Flask(__name__)
+
+       # Generate a globally unique address for this node
+       node_identifier = str(uuid4()).replace('-','')
+
+       # Instantiate the Blockchain
+       blockchain = Blockchain()
+
+       @app.route('/mine', method=['GET'])
      
     
