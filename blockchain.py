@@ -217,4 +217,12 @@ def register_node(self, address):
                recipient = node_identifier,
                amount =1,
                )
+       # Forge the new block by adding it to the chain
+       previous_hash = blockchain.hash(last_block)
+       block = blockchain.new_block(proof, previous_hash)
+
+       response = {
+           'message' : "New Block forged",
+       
+       
                
