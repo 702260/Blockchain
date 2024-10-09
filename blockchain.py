@@ -223,6 +223,11 @@ def register_node(self, address):
 
        response = {
            'message' : "New Block forged",
-       
+           'index' : block['index'],
+           'transactions' : block['transactions'],
+           'proof' : block['proof'],
+           'previous_hash' : block['previous  hash']
+                }
+             return jsonify(response), 200   
        
                
