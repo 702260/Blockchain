@@ -249,5 +249,14 @@ def register_node(self, address):
         @app.route('/chain', method=['GET'])
         def full_chain():
             response = {
+            'chain' : blockchain.chain,
+            'length' : len(blockchain.chain),
+            }
+            return jsonify(response), 200
+
+            @app.route('nodes/register' , method=['POST'])
+
+            def register_nodes():
+                values = request
        
                
