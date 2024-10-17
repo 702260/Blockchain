@@ -257,6 +257,12 @@ def register_node(self, address):
             @app.route('nodes/register' , method=['POST'])
 
             def register_nodes():
-                values = request
+                values = request.get_json()
+
+                nodes = values.get_nodes('nodes')
+                if nodes is None:
+                     return "Error:
+
+                
        
                
