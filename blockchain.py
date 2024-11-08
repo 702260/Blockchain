@@ -266,6 +266,15 @@ def register_node(self, address):
                 for node in nodes
                     blockchain.register_node(node)
 
+                response = {
+                'message' : 'New nodes have been added',
+                'total_nodes' : list(blockchain.nodes),
+                }
+                return jsonify(response), 201
+
+                @app.route('/nodes/resolve', methods=['GET'])
+                
+
                 
        
                
