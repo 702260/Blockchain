@@ -281,6 +281,13 @@ def register_node(self, address):
                          'message': 'Our chain was replaced',
                          'new_chain': blockchain.chain
                                  }
+                    return jsonify(response), 200
+
+                    if __name__ == '__main__':
+                    from argparse import ArgumentParser
+
+                    parser = ArgumentParser()
+                    parser.add_argument('-p', '--port', default = 5000, type = int, help ='port to listen on')
                 
 
                 
