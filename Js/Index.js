@@ -12,4 +12,7 @@ module.exports = async( request, response) => {
   let output;
 
   switch (route) {
+    case "/new_block":
+      output = blockchain.newBlock();
+      break;
       
