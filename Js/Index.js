@@ -15,4 +15,8 @@ module.exports = async( request, response) => {
     case "/new_block":
       output = blockchain.newBlock();
       break;
+
+    case "/last_block":
+      output = blockchain.lastBlock();
+      break;
       
