@@ -19,4 +19,6 @@ module.exports = async( request, response) => {
     case "/last_block":
       output = blockchain.lastBlock();
       break;
+
+    case "/get_peers":
       
