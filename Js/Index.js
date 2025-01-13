@@ -23,5 +23,6 @@ module.exports = async( request, response) => {
     case "/get_peers":
       output = blockchain.getPeers();
       break;
+    case "submit_transaction":
       
       
