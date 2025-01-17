@@ -23,5 +23,9 @@ module.exports = async( request, response) => {
     case "/get_peers":
       output = blockchain.getPeers();
       break;
-      
+    case "/submit_transaction":
+      output = blockchain.addTransaction(transaction);
+      break;
+      default
+      output  = blockchain.lastBlock();
       
