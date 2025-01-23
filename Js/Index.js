@@ -29,3 +29,7 @@ module.exports = async( request, response) => {
       default
       output  = blockchain.lastBlock();
       
+  }
+  send(response, 200, output);
+};
+  
