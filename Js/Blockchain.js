@@ -22,10 +22,7 @@ class Blockchain {
   getPeers() {
        return Array.from(this.peers);
   }
-  
-  
-  
-  
+
   
 
     
