@@ -50,7 +50,7 @@ def register_node(self, address):
    while current_index < len(chain):
       block = chain[current_index]
       print(f'{last_block'})
-      print(f'{block}')
+      print(f'{block'})
       print("\n--------\n")
       # check that the hash of the block is correct
 
