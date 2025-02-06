@@ -22,7 +22,15 @@ class Blockchain {
   getPeers() {
        return Array.from(this.peers);
   }
-
+  /**
+  * creates a new block containing any
+  outstanding transaction
+  */
+  newBlock(previousHash, nonce = NULL) {
+    let block = {
+      index: this.chain.length, 
+  
+timestamp: new Date().toISOString()
   
 
     
