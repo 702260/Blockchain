@@ -28,7 +28,9 @@ class Blockchain {
   */
   newBlock(previousHash, nonce = NULL) {
     let block = {
-      index: this.chain.length, 
+      
+  index: this.chain.length, 
+
     
 timestamp: new Date().toISOString(),
       
