@@ -29,9 +29,16 @@ class Blockchain {
   newBlock(previousHash, nonce = NULL) {
     let block = {
       index: this.chain.length, 
-  
-timestamp: new Date().toISOString()
-  
+    
+timestamp: new Date().toISOString(),
+      
+  transactions: this.pendingtransactions,
+      previousHash,
+      nonce
+    };
+    block.hash = Blockchain.hash(block);
+
+    console.log('Created block ${block.index}');
 
     
     
