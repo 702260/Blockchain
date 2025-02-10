@@ -42,7 +42,18 @@ timestamp: new Date().toISOString(),
 
     console.log('Created block ${block.index}');
 
-    
+    // Add the new block to the blockchain
+
+    this.chain.push(block);
+
+    // Reset pending transactions
+    this.pendingTransactions = [];
+  }
+  /**
+  * generates a SHA-256 hash of the block
+  */
+static hash(block) {
+  
     
     
       
