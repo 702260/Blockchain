@@ -53,9 +53,14 @@ timestamp: new Date().toISOString(),
   * generates a SHA-256 hash of the block
   */
 static hash(block) {
+  const blockString = JSON.stringify(block,Object.keys(block).sort());
+  return crypto.createHash("sha256").update(blockString).digest("hex");
+}
+
+/**
+* returns the last block in the chain
   
-    
-    
-      
-    
-  
+*/
+  lastBlock() {
+    return this.chain.length && this.chain[this.chain.length-1];
+  }
