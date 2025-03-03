@@ -21,6 +21,14 @@ class Blockchain
    */
     getPeers() {
       return Array.from(this.peers);
+    }
+    /**
+    * creates a new block containing any
+    outstanding transaction
+    */
+    newBlock(previousHash, nonce = null) {
+      let block = {
+
 
   
     
