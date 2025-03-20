@@ -61,7 +61,8 @@ static hash(block) {
 * returns the last block in the chain
   
 */
-  lastBlock() {
+  lastBlock()
+  {
     return this.chain.length && this.chain[this.chain.length-1];
   }
   /**
