@@ -71,3 +71,4 @@ static hash(block) {
   lastBlock() {
     return this.chain.length && this.chain[this.chain.length - 1];
   }
+  /* Determines if a hash begins with
