@@ -71,4 +71,24 @@ static hash(block) {
   lastBlock() {
     return this.chain.length && this.chain[this.chain.length - 1];
   }
-  /* Determines if a hash begins with
+  /* Determines if a hash begins with a "difficulty" number of 0s
+  *
+  * @param hashofBlock: the hash of the block (hex string)
+  * @param difficulty: an integer defining the difficulty
+  */
+  static powIsAcceptable(hashofBlock, difficulty) {
+    return hasofBlock.slice(0,difficulty) ==="0".repeat(difficulty);
+  }
+  /**
+  * Genarates a random 32 byte string
+ */
+  static nonce() {
+  return crypto.createHash("sha256").update(crypto.randomBytes(32)).digest("hex");
+  }
+
+  /**
+  * Proof of Work mining algorithm
+  *
+  * We hash the block with random string until the hash begins with
+  * a difficulty number of 0s.
+                                            }                         
