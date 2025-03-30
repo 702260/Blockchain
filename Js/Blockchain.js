@@ -91,4 +91,10 @@ static hash(block) {
   *
   * We hash the block with random string until the hash begins with
   * a difficulty number of 0s.
-                                            }                         
+  */ 
+  mine(blocktoMine = null, difficulty = 4){
+    const block = blockToMine || this.lastBlock();
+
+    while(true) {
+     block.nonce = Blockchain.nonce();
+    
