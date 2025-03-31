@@ -97,4 +97,6 @@ static hash(block) {
 
     while(true) {
      block.nonce = Blockchain.nonce();
+     if(Blockchain.powIsAcceptable(blockChain.hash(block), difficulty)) {
+       console.log("We mined a block!")
     
