@@ -99,10 +99,10 @@ static hash(block) {
      block.nonce = Blockchain.nonce();
      if(Blockchain.powIsAcceptable(blockChain.hash(block), difficulty)) {
        console.log("We mined a block!")
-       console.log(` - Block hash: ${Blockchain.hash(block)}`);
-       console.log(` - nonce:    ${block.nonce}`);
+       console.log(` - Block hash: ${Blockchain.hash(block)}`;
+       console.log(`   - nonce:        ${block.nonce}`);
        return block;
-        }
+     }
     }
   }
 }
