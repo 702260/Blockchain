@@ -16,7 +16,9 @@ namespace BlockChainDemo
 
       var server = new TinyWebServer.WebServer(request =>
                    {
-       
-      
+       string path = request.Url.PathAndQuery.ToLower();
+       string query = "";
+        string json = "";
+                     
   
 
