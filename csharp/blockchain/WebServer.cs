@@ -19,6 +19,19 @@ namespace BlockChainDemo
        string path = request.Url.PathAndQuery.ToLower();
        string query = "";
         string json = "";
+        if(path.Contains("?"))
+        {
+          string[] parts = path.Split('?');
+          path = parts[0];
+          query = parts[1];
+        }
+        switch (path)
+        {
+            //GET: http://localhost:12345/mine
+          case "/mine":
+            return chain.Mine();
+     // POST: http://localhost:12345/transactions/new
+       
                      
   
 
