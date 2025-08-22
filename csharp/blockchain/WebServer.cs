@@ -55,5 +55,5 @@ namespace BlockChainDemo
             json = new StreamReader(request.InputStream).ReadToEnd();
             var urlList = new {Urls = new string[0] };
            var obj = JsonConvert.DeserializeAnonymousType(json, urlList); 
-  
+           return chain.registerNodes(obj.Urls);
 
