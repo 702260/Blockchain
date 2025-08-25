@@ -57,3 +57,7 @@ namespace BlockChainDemo
            var obj = JsonConvert.DeserializeAnonymousType(json, urlList); 
            return chain.registerNodes(obj.Urls);
 
+            //GET http://localhost:12345/nodes/resolve
+
+          case "nodes/resolve":
+
