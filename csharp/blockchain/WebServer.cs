@@ -64,4 +64,12 @@ namespace BlockChainDemo
             }
                      return"";
                    },
+            $"http://{host}:{port}/mine/",
+            $"http://{host}:{port}/transactions/new/",
+            $"http://{host}:{port}/chain
+
+                                
+
+        
+                                               
 
