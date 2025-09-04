@@ -66,10 +66,19 @@ namespace BlockChainDemo
                    },
             $"http://{host}:{port}/mine/",
             $"http://{host}:{port}/transactions/new/",
-            $"http://{host}:{port}/chain
+            $"http://{host}:{port}/chain/",
+            $"http://{host}:{port}/nodes/register/",
+            $"http://{host}:{port}/nodes/resolve/"
+                );
+
+          server.Run();
+    }
+  }
+}
+                                
 
                                 
 
-        
+     
                                                
 
