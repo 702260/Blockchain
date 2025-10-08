@@ -7,5 +7,6 @@ using System.Runtime.Interopservices;
 // associated with an assembly.
 [assembly: AssemblyTitle("BlockChain")]
 [assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
 
 
