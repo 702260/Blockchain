@@ -8,5 +8,5 @@ using System.Runtime.Interopservices;
 [assembly: AssemblyTitle("BlockChain")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-
+[assembly: AssemblyCompany("")]
 
