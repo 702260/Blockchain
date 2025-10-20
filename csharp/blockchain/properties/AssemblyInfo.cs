@@ -10,4 +10,5 @@ using System.Runtime.Interopservices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("BlockChain")]
+[assembly: AssemblyCopyright("Copyright @ 2017")]
 
