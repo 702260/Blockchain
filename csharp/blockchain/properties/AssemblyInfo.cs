@@ -14,3 +14,6 @@ using System.Runtime.Interopservices;
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
+// setting ComVisible to false makes the types in this assembly not visible
+// to COM components.
+
