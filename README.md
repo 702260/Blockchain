@@ -13,5 +13,6 @@ $pipenv run python blockchain.py -port 5002
 
 C# implementation. :-
 1. Open the solution file (BlockChain.sln) using the File> Open > Project/Solution menu options within Visual studio.
+2. From within the "Solution Explorer",
 
 
