@@ -6,6 +6,9 @@ Install pipenv.
 
 $ pip install pipenv
 
+install requirements
+$pipenv install
+
 Run the server
 $pipenv run python blockchain.py
 $pipenv run python blockchain.py -p 5001
