@@ -14,6 +14,9 @@ $pipenv run python blockchain.py
 $pipenv run python blockchain.py -p 5001
 $pipenv run python blockchain.py -port 5002
 
+Docker
+Another option for running this blockchain program is to use Docker.Follow the instructions below to create a local Docker container:
+
 Installation (C# implementation). :-
 1. Open the solution file (BlockChain.sln) using the File> Open > Project/Solution menu options within Visual studio.
 2. From within the "Solution Explorer", right click the BlockChain.Console project and select the "Set As Startup Project" option.
