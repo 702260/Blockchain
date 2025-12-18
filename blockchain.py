@@ -35,8 +35,8 @@ def register_node(self, address):
      raise ValueError('Invalid URL')
 
 
- def valid_chain(self, chain):
-   """
+def valid_chain(self, chain):
+ """
    Determine ifa given blockchain is valid
 
    :param chain: A blockchain
