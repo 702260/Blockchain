@@ -180,7 +180,7 @@ def valid_chain(self, chain):
             return  proof
 
           @staticmethod
-          def valid_proof(last_proof, proof, last_hash):
+       def valid_proof(last_proof, proof, last_hash):
               """
               validates the proof
 
