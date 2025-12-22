@@ -37,22 +37,21 @@ def register_node(self, address):
 
 def valid_chain(self, chain):
  """
-   Determine ifa given blockchain is valid
+   Determine if a given blockchain is valid
 
    :param chain: A blockchain
    :return: True if valid, False if not
    """
 
    last_block = chain[0]
-
    current_index = 1
 
    while current_index < len(chain):
       block = chain[current_index]
-      print(f'{last_block'})
-      print(f'{block'})
+      print(f'{last_block}')
+      print(f'{block}')
       print("\n--------\n")
-      # check that the hash of the block is correct
+    # check that the hash of the block is correct
 
       last_block_hash = self.hash(last_block)
       if block['previous_hash'] != last_block_hash;
@@ -67,7 +66,7 @@ def valid_chain(self, chain):
 
      return True
 
-     def resolve_conflicts(self):
+   def resolve_conflicts(self):
      """
      This is our consensus algorithm, it resolves conflicts
      by replacing our chain with the the longest one in the network.
