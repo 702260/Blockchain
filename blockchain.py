@@ -272,7 +272,7 @@ def valid_chain(self, chain):
                 return jsonify(response), 201
 
                 @app.route('/nodes/resolve', methods=['GET'])
-                def consensus():
+         def consensus():
                     replaced = blockchain.resolve_conflicts()
 
                     if replaced:
