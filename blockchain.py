@@ -66,7 +66,7 @@ def valid_chain(self, chain):
 
      return True
 
-   def resolve_conflicts(self):
+def resolve_conflicts(self):
      """
      This is our consensus algorithm, it resolves conflicts
      by replacing our chain with the the longest one in the network.
@@ -272,7 +272,7 @@ def valid_chain(self, chain):
                 return jsonify(response), 201
 
                 @app.route('/nodes/resolve', methods=['GET'])
-                def consensus():
+         def consensus():
                     replaced = blockchain.resolve_conflicts()
 
                     if replaced:
