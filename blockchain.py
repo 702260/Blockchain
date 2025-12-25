@@ -126,7 +126,7 @@ def resolve_conflicts(self):
                return block
 
 
-          def new_transaction(self, sender, recipient, amount):
+        def new_transaction(self, sender, recipient, amount):
               """
               Creates a new transaction to go into a next mined block
               :param Sender: Address of the sender
@@ -143,7 +143,8 @@ def resolve_conflicts(self):
                 return  self.last_block['index'] + 1
 
          @property
-         def last_block(self):
+         
+        def last_block(self):
              return self.chain[-1]
 
          @staticmethod
