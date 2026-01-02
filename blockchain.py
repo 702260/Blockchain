@@ -256,7 +256,7 @@ def resolve_conflicts(self):
 
             @app.route('nodes/register' , method=['POST'])
 
-            def register_nodes():
+        def register_nodes():
                 values = request.get_json()
 
                 nodes = values.get_nodes('nodes')
