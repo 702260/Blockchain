@@ -281,6 +281,12 @@ def resolve_conflicts(self):
                          'message': 'Our chain was replaced',
                          'new_chain': blockchain.chain
                                  }
+                    else:
+                    response = {
+                        'message': 'Our chain is authoritative',
+                        'chain' : blockchain.chain
+                              }
+                    
                     return jsonify(response), 200
 
          if __name__ == '__main__':
