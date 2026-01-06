@@ -217,18 +217,18 @@ def resolve_conflicts(self):
                recipient = node_identifier,
                amount =1,
                )
-       # Forge the new block by adding it to the chain
-       previous_hash = blockchain.hash(last_block)
-       block = blockchain.new_block(proof, previous_hash)
+         # Forge the new block by adding it to the chain
+         previous_hash = blockchain.hash(last_block)
+         block = blockchain.new_block(proof, previous_hash)
 
-       response = {
-           'message' : "New Block forged",
-           'index' : block['index'],
-           'transactions' : block['transactions'],
-           'proof' : block['proof'],
-           'previous_hash' : block['previous  hash']
-                }
-             return jsonify(response), 200   
+         response = {
+             'message' : "New Block forged",
+             'index' : block['index'],
+             'transactions' : block['transactions'],
+             'proof' : block['proof'],
+             'previous_hash' : block['previous  hash']
+            }
+         return jsonify(response), 200   
 
         @app.route('/transactions/new', methods=['POST'])
 
