@@ -107,12 +107,14 @@ def resolve_conflicts(self):
            """
            Create a new Block in the Blockchain
 
+
            :param proof: The proof given by the proof of Work algorithm
            :param previous_hash: Hash of previous Block
            :return: New Block
            """
 
            block = {
+
            'index': len(self.chain) + 1,
            'timestamp': time(),
            'transactions': self.current_transactions,
