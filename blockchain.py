@@ -99,7 +99,7 @@ def resolve_conflicts(self):
                self.chain = new_chain
                return True
 
-           return False
+         return False
 
        def new_block(self, proof, previous_hash):
            """
