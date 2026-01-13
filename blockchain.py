@@ -74,14 +74,14 @@ def resolve_conflicts(self):
      :return: True if our chain was replaced, False if not
      """
 
-     neighbours = self.nodes
-     new_chain = None
+      neighbours = self.nodes
+      new_chain = None
 
-     # We're only looking for chains longer than ours
-     max_length = len(self.chain)
+      # We're only looking for chains longer than ours
+      max_length = len(self.chain)
 
-     # Grab and verify the chains from all the nodes in our network
-     for node in neighbours:
+      # Grab and verify the chains from all the nodes in our network
+      for node in neighbours:
          response = requests.get(f'http://{node}/chain')
 
          if response.status_code == 200:
@@ -102,7 +102,7 @@ def resolve_conflicts(self):
 
            return False
 
-       def new_block(self, proof, previous_hash):
+def new_block(self, proof, previous_hash):
            """
            Create a new Block in the Blockchain
 
