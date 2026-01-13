@@ -98,7 +98,7 @@ def resolve_conflicts(self):
            # Replace our chain if we discovered a new, valid  chain longer than ours
            if new_chain:
                self.chain = new_chain
-               return True
+      return True
 
            return False
 
