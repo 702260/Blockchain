@@ -74,8 +74,8 @@ def resolve_conflicts(self):
      :return: True if our chain was replaced, False if not
      """
 
-     neighbours = self.nodes
-     new_chain = None
+      neighbours = self.nodes
+      new_chain = None
 
      # We're only looking for chains longer than ours
 
@@ -97,11 +97,11 @@ def resolve_conflicts(self):
            # Replace our chain if we discovered a new, valid  chain longer than ours
            if new_chain:
                self.chain = new_chain
-               return True
+     return True
 
          return False
 
-       def new_block(self, proof, previous_hash):
+def new_block(self, proof, previous_hash):
            """
            Create a new Block in the Blockchain
 
