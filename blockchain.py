@@ -34,7 +34,7 @@ class Blockchain:
            raise ValueError('Invalid URL')
 
 
-      def valid_chain(self, chain):
+    def valid_chain(self, chain):
     """
     Determine if a given blockchain is valid
 
@@ -65,7 +65,7 @@ class Blockchain:
 
      return True
 
-def resolve_conflicts(self):
+    def resolve_conflicts(self):
      """
      This is our consensus algorithm, it resolves conflicts
      by replacing our chain with the the longest one in the network.
