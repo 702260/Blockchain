@@ -17,53 +17,51 @@ class Blockchain:
         # Create the genesis block
         self.new_block(previous_hash = '1', proof = 100)
 
-   def register_node(self, address):
-       """
-       Add a new node to the list of nodes
+    def register_node(self, address):
+        """
+        Add a new node to the list of nodes
 
-       :param address: Address of node. Eg. 'http://192.168.0.5:5000'
-       """
+        :param address: Address of node. Eg. 'http://192.168.0.5:5000'
+        """
 
-       parsed_url = urlparse(address)
-       if parsed_url.netloc:
-           self.nodes.add(parsed_url.netloc)
-       elif parsed_url.path:
-           # Accepts an URL without scheme like '192.168.0.5:5000'.
-           self.nodes.add(parsed_url.path)
-       else:
-           raise ValueError('Invalid URL')
-
+        parsed_url = urlparse(address)
+        if parsed_url.netloc:
+            self.nodes.add(parsed_url.netloc)
+        elif parsed_url.path:
+            # Accepts an URL without scheme like '192.168.0.5:5000'.
+            self.nodes.add(parsed_url.path)
+        else:
+            raise ValueError('Invalid URL')
 
     def valid_chain(self, chain):
-    """
-    Determine if a given blockchain is valid
+        """
+        Determine if a given blockchain is valid
 
-    :param chain: A blockchain
-    :return: True if valid, False if not
-    """
+        :param chain: A blockchain
+        :return: True if valid, False if not
+        """
 
-    last_block = chain[0]
-    current_index = 1
+        last_block = chain[0]
+        current_index = 1
 
-    while current_index < len(chain):
-       block = chain[current_index]
-       print(f'{last_block}')
-       print(f'{block}')
-       print("\n--------\n")
-       # check that the hash of the block is correct
+        while current_index < len(chain):
+            block = chain[current_index]
+            print(f'{last_block}')
+            print(f'{block}')
+            print("\n--------\n")
+            # check that the hash of the block is correct
+            last_block_hash = self.hash(last_block)
+            if block['previous_hash'] != last_block_hash;
+                return False
 
-       last_block_hash = self.hash(last_block)
-       if block['previous_hash'] != last_block_hash;
-           return False
+            #check that the proof of work is correct
+            if not self.valid_proof(last_block['proof'], block['proof'], last_block_hash):
+                return False
 
-       #check that the proof of work is correct
-       if not self.valid_proof(last_block['proof'], block['proof'], last_block_hash):
-           return False
+            last_block = block
+            current_index += 1
 
-       last_block = block
-       current_index += 1
-
-     return True
+        return True
 
     def resolve_conflicts(self):
      """
