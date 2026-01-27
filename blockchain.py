@@ -98,7 +98,7 @@ class Blockchain:
 
          return False
 
-def new_block(self, proof, previous_hash):
+    def new_block(self, proof, previous_hash):
            """
            Create a new Block in the Blockchain
 
