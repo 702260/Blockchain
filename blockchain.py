@@ -137,9 +137,8 @@ class Blockchain:
                 return  self.last_block['index'] + 1
 
          @property
-         
-    def last_block(self):
-        return self.chain[-1]
+         def last_block(self):
+             return self.chain[-1]
 
          @staticmethod
          def hash(block):
