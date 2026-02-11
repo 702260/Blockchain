@@ -250,23 +250,23 @@ def full_chain():
 
 @app.route('nodes/register' , method=['POST'])
 
-        def register_nodes():
-                values = request.get_json()
+def register_nodes():
+    values = request.get_json()
 
-                nodes = values.get_nodes('nodes')
-                if nodes is None:
-                     return "Error: Please supply a valid list of nodes", 400
+    nodes = values.get_nodes('nodes')
+    if nodes is None:
+        return "Error: Please supply a valid list of nodes", 400
 
-                for node in nodes
-                    blockchain.register_node(node)
+    for node in nodes
+        blockchain.register_node(node)
 
-                response = {
-                'message' : 'New nodes have been added',
-                'total_nodes' : list(blockchain.nodes),
-                }
-                return jsonify(response), 201
+    response = {
+        'message' : 'New nodes have been added',
+        'total_nodes' : list(blockchain.nodes),
+    }
+    return jsonify(response), 201
 
-                @app.route('/nodes/resolve', methods=['GET'])
+@app.route('/nodes/resolve', methods=['GET'])
          def consensus():
                     replaced = blockchain.resolve_conflicts()
 
