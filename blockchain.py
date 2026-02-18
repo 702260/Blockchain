@@ -121,24 +121,24 @@ class Blockchain:
         return block
 
     def new_transaction(self, sender, recipient, amount):
-              """
-              Creates a new transaction to go into a next mined block
-              :param Sender: Address of the sender
-              :param recipient: Address of the recipient
-              :param Amount: Amount
-              :return: The index of the block that will hold this transaction
-              """
-              self.current_transactions.append({
-                  'sender' : sender,
-                  'recipient' : recipient,
-                  'amount' : amount,
-                    })
+        """
+        Creates a new transaction to go into a next mined block
+        :param Sender: Address of the sender
+        :param recipient: Address of the recipient
+        :param Amount: Amount
+        :return: The index of the block that will hold this transaction
+        """
+        self.current_transactions.append({
+            'sender' : sender,
+            'recipient' : recipient,
+            'amount' : amount,
+        })
 
-                return  self.last_block['index'] + 1
+        return  self.last_block['index'] + 1
 
     @property
     def last_block(self):
-    return self.chain[-1]
+        return self.chain[-1]
 
     @staticmethod
     def hash(block):
